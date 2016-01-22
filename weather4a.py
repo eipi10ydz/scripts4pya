@@ -22,3 +22,8 @@ class weather(object):
 				droid.notify(city,combine)
 				
 droid = android.droid()
+
+#you can use the class weather as my codes below
+
+#hf = weather('AH','hefei')
+#hf.weather()

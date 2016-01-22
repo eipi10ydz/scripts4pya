@@ -42,3 +42,7 @@ else:
 			res = re.findall(patternNwang,result,re.M)
 			if len(res[0]) == 5:
 				droid.notify(u'提示',u'登陆成功')
+
+#replace the #... with your username and password
+#if you want to change the exit, please change the value of choice
+#the value of choice equals to the number of exit minus 1

@@ -10,7 +10,7 @@ class weather(object):
 	def weather(self):
 		try:
 			res = urllib2.urlopen('http://www.nmc.cn/publish/forecast/china.html').read().decode('utf-8')	
-		except urllib2.URLError:pass
+		except urllib2.URLError:
 			droid.notify('网络错误','无法获取天气信息')
 		else:
 			match = re.findall(self.pattern,res,re.M)
@@ -21,7 +21,7 @@ class weather(object):
 				self.city = match[0][0]
 				droid.notify(city,combine)
 				
-droid = android.droid()
+droid = android.Android()
 
 #you can use the class weather as my codes below
 

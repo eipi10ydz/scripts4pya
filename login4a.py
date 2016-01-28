@@ -9,9 +9,10 @@ from bs4 import BeautifulSoup
 from requests import Session
 
 class jwxtLogin(object):
-	def __init__(self, username, passwd):
+	def __init__(self, username, passwd, gpa):
 		self.username = username
 		self.passwd = passwd
+		self.temp = gpa
 		self.loginInit()
 
 	def loginInit(self):
@@ -72,7 +73,6 @@ class jwxtLogin(object):
 					droid.notify('提示',r[0])
 				else:
 					droid.notify('提示','登陆成功！')
-					self.temp = '3.93'
 					while True:
 						self.askForGrade()
 						time.sleep(5)
@@ -100,5 +100,5 @@ class jwxtLogin(object):
 
 if __name__ == '__main__':
 	droid = android.Android()
-#	jwxtLogin(your username, your password)
+#	jwxtLogin(your username, your password, your gpa)
 
